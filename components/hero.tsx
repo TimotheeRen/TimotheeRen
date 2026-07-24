@@ -21,7 +21,7 @@ export default function Hero() {
           </Button>
         </motion.div>
         <motion.div animate={{ y: -20, opacity: 1 }} transition={{ duration: 0.75, type: "spring", stiffness: 100, delay: 0.3 }} initial={{ opacity: 0 }}>
-          <Button variant="outline" className="hover:bg-accent-foreground shadow-sm p-6">Who I am</Button>
+          <a href="#presentation"><Button variant="outline" className="hover:bg-accent-foreground shadow-sm p-6">Who I am</Button></a>
         </motion.div>
       </div>
     </div>

@@ -11,6 +11,7 @@ const fontSans = Plus_Jakarta_Sans({
 const fontSerif = Lora({
   subsets: ["latin"],
   variable: "--font-serif",
+  style: ["normal", "italic"],
 });
 
 const fontMono = IBM_Plex_Mono({
