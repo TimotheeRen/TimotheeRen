@@ -29,7 +29,7 @@ export default function Education() {
     <div id="education">
       <motion.h1 initial={{ opacity: 0, y: 20 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, ease: "easeInOut" }} viewport={{ once: true }} className="mt-32 mb-3 text-5xl font-bold">Educations and <span className="text-primary">Certifications</span></motion.h1>
       <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, ease: "easeInOut", delay: 0.05 }} viewport={{ once: true }} className="mb-4 text-lg text-muted-foreground">My educational background and certifications I passed</motion.p>
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }} viewport={{ once: true }} className="mx-auto max-w-(--breakpoint-sm) px-6 py-6 md:pb-20">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }} viewport={{ once: true }} className="mx-auto max-w-(--breakpoint-sm) px-6 py-6 md:pb-20">
         <div className="relative ml-3 text-left">
           <div className="absolute top-4 bottom-0 left-0 border-l-2" />
 

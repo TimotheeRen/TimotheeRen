@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Lora, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toast";
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -34,7 +35,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiased`}>
         <ThemeProvider>
-          {children}
+          <Toaster>
+            {children}
+          </Toaster>
         </ThemeProvider>
       </body>
     </html>
