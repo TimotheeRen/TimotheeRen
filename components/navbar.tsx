@@ -2,8 +2,12 @@
 
 import { motion } from "motion/react";
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
+import { useTheme } from "next-themes";
 
 export default function Navbar() {
+  const { resolvedTheme, setTheme } = useTheme();
+  if (!resolvedTheme) return null;
+
   return (
     <header className="top-0 left-0 right-0 flex items-center justify-between w-full pt-5 px-6">
       <motion.span initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.75, type: "spring", stiffness: 100, delay: 0.7 }} className="font-semibold">Timothee Ren</motion.span>
@@ -17,7 +21,9 @@ export default function Navbar() {
       </motion.nav>
 
       <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.75, type: "spring", stiffness: 100, delay: 0.7 }}>
-        <AnimatedThemeToggler className="cursor-pointer" />
+        <AnimatedThemeToggler className="cursor-pointer" theme={resolvedTheme as "light" | "dark"}
+          onThemeChange={setTheme}
+        />
       </motion.div>
     </header>
   );
