@@ -1,8 +1,7 @@
 "use client"
 
 import { motion } from "motion/react";
-import { TextAnimate } from "./ui/text-animate";
-import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { CardAction, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { MagicCard } from "./ui/magic-card";
 import { IconBlocks, IconBox, IconCode, IconGraph, IconPipeline, IconServer } from "@tabler/icons-react";
 
@@ -94,7 +93,7 @@ export default function Skills() {
   } as const
 
   return (
-    <div id="presentation">
+    <div id="skills">
       <motion.h1 initial={{ opacity: 0, y: 20 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, ease: "easeInOut" }} viewport={{ once: true }} className="mt-32 mb-3 text-5xl font-bold">My <span className="text-primary">Skills</span></motion.h1>
       <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, ease: "easeInOut", delay: 0.05 }} viewport={{ once: true }} className="mb-4 text-lg text-muted-foreground">My DevOps and programming skills</motion.p>
       <motion.div
