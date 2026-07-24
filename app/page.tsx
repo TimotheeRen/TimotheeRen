@@ -1,6 +1,7 @@
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import Presentation from "@/components/presentation";
+import Skills from "@/components/skills";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <div className="w-full text-center pt-32">
         <Hero />
         <Presentation />
+        <Skills />
       </div>
     </>
   )
