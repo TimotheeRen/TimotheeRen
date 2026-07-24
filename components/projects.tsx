@@ -19,8 +19,8 @@ const projects: Project[] = [
   {
     image: "/overview.png",
     title: "KubePods",
-    description: "A Kubernetes based desktops hosting platform",
-    details: "KubePods is a desktops hosting plateform using Kubernetes. It uses microservices communication with gRPC and follow modern microservives patterns such as database per service and an API Gateway. It is uses FluxCD to be 100% GitOps (check the installation guides in the documentation). It rely on the 'Desktop' service to create Custom Resources that are then applied by a Kubernetes operator written in Rust, which generates the desktop resources. I have decided to chose a trunk based git strategy to maximise my efficiency and reduce features delivery time, as well as reducing GitHub Actions's CI/CD pipeline complexity. The infrastructure is monitored using kube-prometheus-stack, a custom middleware made in the API Gateway exposes metrics to Prometheus that are then show in a grafana dashboard provsioned as code following 'RED' principle. Finaly, a staging envrionment is created using terraform and ansible, to provision and configure 2 virtual machine with terraform's libvirt provider and install and configure a Kubernetes cluster with Kubeadm.",
+    description: "A Kubernetes based desktop hosting platform",
+    details: "KubePods is a desktop hosting platform using Kubernetes. It uses microservices communication with gRPC and follows modern microservices patterns such as database per service and an API Gateway. It uses FluxCD to be 100% GitOps (check the installation guides in the documentation). It relies on the 'Desktop' service to create Custom Resources that are then applied by a Kubernetes operator written in Rust, which generates the desktop resources. I have decided to choose a trunk-based Git strategy to maximize my efficiency and reduce feature delivery time, as well as reducing GitHub Actions' CI/CD pipeline complexity. The infrastructure is monitored using kube-prometheus-stack, a custom middleware made in the API Gateway exposes metrics to Prometheus that are then shown in a Grafana dashboard provisioned as code following the 'RED' principle. Finally, a staging environment is created using Terraform and Ansible, to provision and configure 2 virtual machines with Terraform's libvirt provider and install and configure a Kubernetes cluster with Kubeadm.",
     github: "https://github.com/TimotheeRen/KubePods",
     doc: "https://kubepods.vercel.app/docs"
   },
@@ -28,15 +28,15 @@ const projects: Project[] = [
     image: "/overview2.png",
     title: "Furnace",
     description: "A Kubernetes based Minecraft servers hosting solution",
-    details: "Furnace is a Kubernetes Helm Chart that provides a Minecraft Server hosting service. It relies on Go Microservices communicating with a Reddis message broker. To create the servers, it uses a Go service that create 'Server' Custom Resource and a Go Kubernetes Operator that creates the Kubernetes resources. Those resources are then monitored on a panel that shows in real time servers state and metrics (it is periodically scrapped in goroutine in the server and stored in reddis).",
+    details: "Furnace is a Kubernetes Helm Chart that provides a Minecraft server hosting service. It relies on Go microservices communicating with a Redis message broker. To create the servers, it uses a Go service that creates 'Server' Custom Resources and a Go Kubernetes Operator that creates the Kubernetes resources. Those resources are then monitored on a panel that shows the real-time server state and metrics (it is periodically scraped in a goroutine in the server and stored in Redis).",
     github: "https://github.com/TimotheeRen/Furnace",
     doc: "https://furnace-host.vercel.app/docs"
   },
   {
     image: "/homelab.png",
     title: "My Homelab",
-    description: "My homelab, running in a Raspberry Pi 4.",
-    details: "A simple yet well designed homelab running on my only Raspberry Pi 4. It uses Ansible for automatic configuration and deploy a Kubernetes cluster in K3d. It deploys various apps that I daily use such as Donetick and Nextcloud, and uses FluxCD for GitOps.",
+    description: "My homelab, running on a Raspberry Pi 4.",
+    details: "A simple yet well-designed homelab running on my only Raspberry Pi 4. It uses Ansible for automatic configuration and deploys a Kubernetes cluster in K3d. It deploys various apps that I use daily, such as Donetick and Nextcloud, and uses FluxCD for GitOps.",
     github: "https://github.com/TimotheeRen/homelab",
     doc: null
   },
@@ -161,10 +161,9 @@ export default function Projects() {
           >
             <IconX
               size={22}
-              className="absolute right-4 top-4 cursor-pointer"
+              className="fixed bottom-6 left-1/2 -translate-x-1/2 cursor-pointer sm:absolute sm:right-4 sm:top-4 sm:left-auto sm:translate-x-0"
               onClick={() => setSelectedProject(null)}
             />
-
             <motion.div
               layoutId={`${selectedProject.title}-image`}
               className="relative shrink-0 h-[35vh] w-full max-w-5xl overflow-hidden rounded-2xl bg-white sm:h-[60vh]"
