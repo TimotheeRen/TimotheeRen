@@ -1,3 +1,4 @@
+import Education from "@/components/education";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import Presentation from "@/components/presentation";
@@ -13,6 +14,7 @@ export default function Home() {
         <Presentation />
         <Skills />
         <Projects />
+        <Education />
       </div>
     </>
   )
