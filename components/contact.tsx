@@ -24,6 +24,7 @@ export default function Contact() {
 
   return (
     <motion.div
+      id="contact"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeInOut", delay: 0.1 }}
