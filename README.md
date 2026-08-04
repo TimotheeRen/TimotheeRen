@@ -1,5 +1,5 @@
 # Welcome 👋
-I am Timothee Ren, a DevOps learner. I have a few years of experience with diverse programming languages and frameworks such as Next.js, NestJS, Spring Boot, and Axum/Tonic.
+I am Timothée Ren, a DevOps learner. I have a few years of experience with diverse programming languages and frameworks such as Next.js, NestJS, Spring Boot, and Axum/Tonic.
 
 # My go-to stack 🛠️ 
 | | |
